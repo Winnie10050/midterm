@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人簡歷 - 許維妮</title>
+    <style>
+        
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f3f0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: start; 
+            min-height: 100vh; 
+            font-size: 20px; 
+        }
+
+        .resume {
+            width: 100vw;
+            display: flex;
+            flex-direction: row; 
+        }
+
+        
+        .left-section {
+            width: 30%; 
+            background-color: #f0dada;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+            height: 100vh; 
+            position: sticky;
+            top: 0;
+        }
+
+        .right-section {
+            width: 70%; 
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+
+        .left-section img {
+            max-width: 150px; 
+            height: auto; 
+            border-radius: 10%;
+            border: 5px solid #fff;
+            margin-bottom: 20px;
+        }
+
+        .contact-info, .skills, .interests {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .contact-info h3, .skills h3, .interests h3 {
+            font-size: 1.5rem; 
+            color: #944d6c;
+        }
+
+        .contact-info p, .skills p, .interests p {
+            font-size: 1.2rem; 
+            color: #555;
+        }
+
+        .skills ul, .interests ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills ul li, .interests ul li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .stars {
+            color: #944d6c;
+            margin-left: 5px;
+        }
+
+        
+        .right-section {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .right-section h2 {
+            font-size: 2rem; 
+            color: #944d6c;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            font-size: 1.8rem; 
+            color: #944d6c;
+            border-bottom: 1px solid #f0dada;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            margin-bottom: 15px;
+        }
+
+        
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            margin-top: 20px;
+        }
+
+        .photo-gallery img {
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; 
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        
+        @media (min-width: 768px) {
+            .resume {
+                flex-direction: row;
+            }
+
+            .left-section {
+                width: 30%;
+                padding: 20px;
+            }
+
+            .right-section {
+                width: 70%;
+                padding: 20px;
+            }
+        }
+
+
+        
+        .progress-circle-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .progress-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .progress-circle {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #f0dada;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .progress-circle .circle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(#f8a5b6 0%, #f0dada 0%);
+            animation: progressAnimation 5s ease-out forwards;
+        }
+
+        .progress-item:nth-child(1) .circle {
+            animation: progressAnimation70 5s ease-out forwards;
+        }
+        
+        .progress-item:nth-child(2) .circle {
+            animation: progressAnimation60 5s ease-out forwards;
+        }
+
+        .progress-item:nth-child(3) .circle {
+            animation: progressAnimation80 5s ease-out forwards;
+        }
+
+        
+        @keyframes progressAnimation70 {
+            from { background: conic-gradient(#f8a5b6 0%, #f0dada 0%); }
+            to { background: conic-gradient(#f8a5b6 0% 70%, #f0dada 70% 100%); }
+        }
+
+        @keyframes progressAnimation60 {
+            from { background: conic-gradient(#f8a5b6 0%, #f0dada 0%); }
+            to { background: conic-gradient(#f8a5b6 0% 60%, #f0dada 60% 100%); }
+        }
+
+        @keyframes progressAnimation80 {
+            from { background: conic-gradient(#f8a5b6 0%, #f0dada 0%); }
+            to { background: conic-gradient(#f8a5b6 0% 80%, #f0dada 80% 100%); }
+        }
+
+        
+        .progress-circle .circle-text {
+            font-size: 1.2rem;
+            color: #fff;
+            z-index: 1;
+        }
+
+        
+        .skills-section h3 {
+            font-size: 1.8rem;
+            color: #944d6c;
+            border-bottom: 1px solid #f0dada;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .photo-gallery img {
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; 
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            color: #f8a5b6; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="resume">
+        
+        <div class="left-section">
+            <img src="Img/picture01.jpg" alt="個人照片"> 
+            <div class="contact-info">
+                <h3>聯絡資訊</h3>
+                <p><a href="tel:0905369852">📞 0905369852</a></p>
+                <p><a href="mailto:wwinnie1005@gmail.com">📧 wwinnie1005@gmail.com</a></p>
+                <p><a href="https://www.instagram.com/winnie_105" target="_blank">📷 Insta: winnie_105</a></p>
+            </div>
+            
+            <div class="interests">
+                <h3>休閒興趣</h3>
+                <ul>
+                    <li>🎶 聽歌</li>
+                    <li>🎤 唱歌</li>
+                    <li>📺 看劇</li>
+                    <li>📺 看動漫</li>
+                    <li>🛍️ 逛街</li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="right-section">
+            <h2>許維妮</h2>
+            <p>資訊管理系大二學生</p>
+
+            <div class="section">
+                <h3>關於我</h3>
+                <p>我是中原資訊管理系的學生 個性樂觀隨和。</p>
+            </div>
+
+            <div class="section">
+                <h3>社團經歷</h3>
+                <ul>
+                    <li><strong>排球社</strong> - 成員<br>參與校內排球比賽，並在訓練中積極合作</li>
+                    <li><strong>管樂團</strong> - 長笛手<br>參與管樂團演出，負責長笛演奏</li>
+                </ul>
+                
+                
+                <div class="photo-gallery">
+                    
+                    <img src="Img/picture02.jpg" alt="排球社活動">
+                    <img src="Img/picture04.jpg" alt="排球社活動">
+                    <img src="Img/picture03.jpg" alt="管樂團演出">
+                    <img src="Img/picture05.jpg" alt="管樂團演出">
+                    
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <h3>專長</h3>
+                <div class="progress-circle-container">
+                    <div class="progress-item">
+                        <div class="progress-circle">
+                            <div class="circle"></div>
+                            <div class="circle-text">70%</div>
+                        </div>
+                        <div class="skill-label">小提琴  從幼稚園開始學 參加過許多比賽 拿到獎杯</div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-circle">
+                            <div class="circle"></div>
+                            <div class="circle-text">60%</div>
+                        </div>
+                        <div class="skill-label">長笛  從國中開始學 是學校的管樂班 比賽曾拿到全國特優</div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-circle">
+                            <div class="circle"></div>
+                            <div class="circle-text">80%</div>
+                        </div>
+                        <div class="skill-label">英文  一直都對英文有很大的興趣 希望有機會可以出國讀書</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h3>服務經歷</h3>
+                <p>跟著學校的課程與活動 到台北教導老年人如何使用VR 戴上頭盔體驗小遊戲</p>
+                <div class="photo-gallery">
+                    
+                    <img src="Img/picture07.jpg" alt="服務經歷">
+                    <img src="Img/picture06.jpg" alt="服務經歷">
+                    
+                    
+                </div>
+                </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
